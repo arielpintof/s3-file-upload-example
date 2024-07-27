@@ -1,4 +1,5 @@
 "use client"
+
 import { UploadForm } from "./(form)/page";
 
 export default function Home() {

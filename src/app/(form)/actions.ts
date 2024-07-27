@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { validateFormData } from "./validation";
 import { S3Client, PutObjectCommand} from "@aws-sdk/client-s3"
 
-interface Message{
+interface Message {
     status: string;
     message: string;
 }
@@ -56,11 +56,11 @@ async function uploadFileToS3(fileName: string, buffer: Buffer) {
     
     const command = new PutObjectCommand(params);
 
-    try{
+    try {
         const response = await s3Client.send(command);
         console.log(response);
 
-        return fileName
+        return fileName;
     } catch(error){
         console.error(error);
     }

@@ -16,8 +16,8 @@ export async function validateFormData(formData: FormData) {
 
 
 function isValidImageFile(file: File) {
-    const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/jpg'];
-    const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+    const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/jpg','application/pdf'];
+    const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.pdf)$/i;
 
     if (!allowedMimeTypes.includes(file.type)) {
         return false;
